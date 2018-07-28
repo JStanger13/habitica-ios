@@ -9,7 +9,9 @@
 import UIKit
 
 class AuthenticationSettingsViewController: BaseSettingsViewController {
-    
+    private func makeToast(){
+         ToastManager.show(text: NSLocalizedString("Password Has Been Changed!", comment: ""), color: .green)
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -232,7 +234,8 @@ class AuthenticationSettingsViewController: BaseSettingsViewController {
         alertController.addCancelAction()
         alertController.addAction(title: NSLocalizedString("Change", comment: ""), isMainAction: true) {[weak self] _ in
             if let newPassword = newPasswordTextField.text, let password = oldPasswordTextField.text, let confirmPassword = confirmTextField.text {
-                self?.userRepository.updatePassword(newPassword: newPassword, password: password, confirmPassword: confirmPassword).observeCompleted {}
+                self?.userRepository.updatePassword(newPassword: newPassword, password: password, confirmPassword: confirmPassword).observeCompleted {
+                }
             }
         }
         alertController.show()

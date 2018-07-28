@@ -115,6 +115,11 @@ class ToastManager: NSObject {
     class func show(text: String, color: ToastColor) {
         ToastManager.show(toast: ToastView(title: text, background: color))
     }
+    @objc
+    class func show(text: String, color: ToastColor, duration: Double) {
+        ToastManager.show(toast: ToastView(title: text, background: color, duration: duration))
+    }
+    
 }
 
 struct ToastOptions {

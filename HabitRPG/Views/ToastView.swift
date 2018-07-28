@@ -52,6 +52,16 @@ class ToastView: UIView {
     }
     
     @objc
+    public convenience init(title: String, background: ToastColor, duration: Double) {
+        self.init(frame: CGRect.zero)
+        options.title = title
+        options.backgroundColor = background
+        options.displayDuration = duration
+        loadOptions()
+        accessibilityLabel = title
+    }
+    
+    @objc
     public convenience init(title: String, subtitle: String, icon: UIImage, background: ToastColor) {
         self.init(frame: CGRect.zero)
         options.title = title
@@ -217,5 +227,4 @@ class ToastView: UIView {
             priceIconLabel.removeFromSuperview()
         }
     }
-    
 }

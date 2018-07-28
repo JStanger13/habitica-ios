@@ -8,18 +8,20 @@ workspace 'Habitica'
 plugin 'cocoapods-keys', {
   :project => "Habitica",
   :keys => [
-    "GoogleClient",
-    "GoogleRedirectUrl",
-    "AmplitudeApiKey",
-    "SeedsDevApiKey",
-    "SeedsReleaseApiKey",
-    "SeedsDevGemsInterstitial",
-    "SeedsReleaseGemsInterstitial",
-    "SeedsReleaseShareInterstitial",
-    "SeedsDevShareInterstitial",
-    "ItunesSharedSecret",
-    "StagingKey"
-  ]
+      "GoogleClient",
+      "GoogleRedirectUrl",
+      "AmplitudeApiKey",
+      "SeedsDevApiKey",
+      "SeedsReleaseApiKey",
+      "SeedsDevGemsInterstitial",
+      "SeedsReleaseGemsInterstitial",
+      "SeedsReleaseShareInterstitial",
+      "SeedsDevShareInterstitial",
+      "ItunesSharedSecret",
+      "StagingKey",
+      "InstabugLive",
+      "InstabugBeta"
+    ]
 }
 
 def reactive_pods

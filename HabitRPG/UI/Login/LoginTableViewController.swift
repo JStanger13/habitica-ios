@@ -425,7 +425,7 @@ class LoginTableViewController: UIViewController, UITextFieldDelegate {
         alertController.addCancelAction()
         alertController.addAction(title: NSLocalizedString("Send", comment: ""), isMainAction: true) { _ in
             self.userRepository.sendPasswordResetEmail(email: textField.text ?? "").observeCompleted {
-                ToastManager.show(text: NSLocalizedString("If we have your email on file, instructions for setting a new password have been sent to your email.", comment: ""), color: .green)
+                ToastManager.show(text: NSLocalizedString("If we have your email on file, instructions for setting a new password have been sent to your email.", comment: ""), color: .green, duration: 4.0)
             }
         }
         alertController.show()
